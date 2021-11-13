@@ -49,7 +49,7 @@ pipeline {
         }
         stage('Deploy Info') {
             steps {
-                echo 'Gerando o arquivo e disponibilizando no workspace'
+                echo 'Gerando o arquivo e disponibilizando no workspace!!'
                 
             }
         }
