@@ -11,9 +11,9 @@ pipeline {
         stage('Distro Info') {
             steps {
                 sh '> assessment.txt'
-                sh "${Divisor} >> assessment.txt"
-                sh "${Distro} >> assessment.txt"
-                sh "${Divisor} >> assessment.txt"
+                echo "${Divisor}" >> assessment.txt
+                echo "${Distro}" >> assessment.txt
+                echo "${Divisor}" >> assessment.txt
                 sh 'cat /etc/*-release >> assessment.txt'
             }
         }        
