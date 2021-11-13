@@ -22,7 +22,7 @@ pipeline {
             steps {
                 sh 'echo   >> assessment.txt'
                 sh 'echo $Divisor >> assessment.txt'
-                sh 'echo $Kernel >> assessment.txt"
+                sh 'echo $Kernel >> assessment.txt'
                 sh 'echo $Divisor >> assessment.txt'
                 sh 'echo   >> assessment.txt'
                 sh 'uname -a >> assessment.txt'
