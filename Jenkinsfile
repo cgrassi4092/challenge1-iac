@@ -30,6 +30,7 @@ pipeline {
         }
         stage('Users Info') {
             steps {
+                sh 'echo   >> assessment.txt'
                 sh 'echo $Divisor >> assessment.txt'
                 sh 'echo $Users >> assessment.txt'
                 sh 'echo $Divisor >> assessment.txt'
@@ -48,8 +49,8 @@ pipeline {
         }
         stage('Deploy Info') {
             steps {
-                echo 'Gerando o arquivo e disponibilizando no Repositório'
-               
+                echo 'Gerando o arquivo e disponibilizando no workspace'
+                
             }
         }
     }
