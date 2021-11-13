@@ -14,37 +14,42 @@ pipeline {
                 sh 'echo $Divisor >> assessment.txt'
                 sh 'echo $Distro >> assessment.txt'
                 sh 'echo $Divisor >> assessment.txt'
+                sh 'echo   >> assessment.txt'
                 sh 'cat /etc/*-release >> assessment.txt'
             }
         }        
         stage('Kernel Info') {
             steps {
-                echo "${Divisor} >> assessment.txt"
-                echo "${Kernel} >> assessment.txt"
-                echo "${Divisor} >> assessment.txt"
+                sh 'echo   >> assessment.txt'
+                sh 'echo $Divisor >> assessment.txt'
+                sh 'echo $Kernel >> assessment.txt"
+                sh 'echo $Divisor >> assessment.txt'
+                sh 'echo   >> assessment.txt'
                 sh 'uname -a >> assessment.txt'
             }
         }
         stage('Users Info') {
             steps {
-                echo "${Divisor} >> assessment.txt"
-                echo "${Users} >> assessment.txt"
-                echo "${Divisor} >> assessment.txt"
+                sh 'echo $Divisor >> assessment.txt'
+                sh 'echo $Users >> assessment.txt'
+                sh 'echo $Divisor >> assessment.txt'
                 sh 'cat /etc/passwd | cut -d: -f1 >> assessment.txt'
             }
         }
         stage('Packages Info') {
             steps {
-                echo "${Divisor} >> assessment.txt"
-                echo "${Packages} >> assessment.txt"
-                echo "${Divisor} >> assessment.txt"
+                sh 'echo   >> assessment.txt'
+                sh 'echo $Divisor >> assessment.txt'
+                sh 'echo $Packages >> assessment.txt'
+                sh 'echo $Divisor >> assessment.txt'
+                sh 'echo   >> assessment.txt'
                 sh 'dpkg -l >> assessment.txt'
             }
         }
         stage('Deploy Info') {
             steps {
                 echo 'Gerando o arquivo e disponibilizando no Repositório'
-                
+               
             }
         }
     }
